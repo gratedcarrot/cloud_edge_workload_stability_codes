@@ -174,12 +174,7 @@ def task_size_mb(task_size_kb: float) -> float:
     return max(0.0, float(task_size_kb) / 1024.0)
 
 def cost_energy_proxy(processing_location: str, service_time_ms: Optional[float], task_size_kb: float) -> Tuple[float, float]:
-    """Return normalized cost and energy proxy values for a completed task.
-
-    The coefficients are intentionally unitless proxy coefficients. They are not
-    cloud-provider billing rates or hardware power measurements. The goal is a
-    reproducible relative comparison between modes.
-    """
+    """Return normalized cost and energy proxy values for a completed task."""
     if service_time_ms is None:
         return (0.0, 0.0)
     service_ms = max(0.0, float(service_time_ms))
@@ -326,14 +321,7 @@ def simulate_hybrid(subset: pd.DataFrame, params: Dict, threshold_ms: float=HYBR
     return (pd.DataFrame(detailed_rows), summary)
 
 def simulate_deadline_aware_hybrid(subset: pd.DataFrame, params: Dict) -> Tuple[pd.DataFrame, Dict]:
-    """Baseline hybrid routing with deadline-aware override and cost/energy tie-break.
-
-    This mode intentionally extends the baseline hybrid policy instead of
-    replacing it. The baseline hybrid decision is preserved unless the predicted
-    deadline outcome indicates that the alternate layer is safer. Cost and
-    energy proxy values are used only as a secondary tie-break when both layers
-    are deadline-feasible and their estimated response times are very close.
-    """
+    """Baseline hybrid routing with deadline-aware override and cost/energy tie-break."""
     mode = 'deadline_aware_hybrid'
     edge_state = make_empty_layer_state(int(params['edge_nodes']))
     cloud_state = make_empty_layer_state(int(params['cloud_servers']))
@@ -656,34 +644,8 @@ def generate_controlled_graphs(agg_df: pd.DataFrame, output_dir: Path) -> None:
     plot_metric_grouped(agg_df, 'avg_energy_proxy_mean', 'Average energy proxy', output_dir / 'fig_energy_proxy_with_ci.png', 'avg_energy_proxy_ci95')
 
 def write_method_note(output_dir: Path, args: argparse.Namespace) -> None:
-    note = """
-Simulation Method Note
-==============================
-
-The simulation engine evaluates edge-only, cloud-only, baseline hybrid
-cloud-edge, and deadline-aware hybrid cloud-edge processing using task-level
-workload traces. Each scenario is repeated across independent runs generated
-with fixed seeds. The same trace is used for all processing modes within each
-run, ensuring fair comparison.
-
-The simulator records task-level completion status, processing location,
-waiting time, response time, deadline slack, queue estimates, SLA violation
-status, cloud communication delay, cost proxy, and energy proxy. Finite
-waiting-buffer capacity is enforced for both edge and cloud layers. Summary
-metrics include average response time, average waiting time, throughput,
-utilization, average queue length, blocking probability, cloud offloading
-ratio, SLA violation rate, average cost proxy, and average energy proxy.
-
-The deadline-aware hybrid mode extends the baseline hybrid policy by applying
-deadline-aware overrides. It preserves the baseline hybrid decision unless the
-alternate layer is predicted to satisfy a deadline that the selected layer would
-miss. Cost and energy proxy values are used only as a secondary tie-break when
-both layers are deadline-feasible and response estimates are nearly equal. Scenario/mode results are reported with sample
-mean, standard deviation, and 95% confidence intervals. Statistical tests are
-generated when scipy is available. Optional sensitivity analysis evaluates
-threshold, edge capacity, cloud capacity, edge queue capacity, and network
-delay under high-load and burst-load conditions.
-""".strip()
+  
+.strip()
     (output_dir / 'simulation_method_note.txt').write_text(note, encoding='utf-8')
     config = {'input_dir': str(args.input_dir), 'output_dir': str(args.output_dir), 'baseline_hybrid_threshold_ms': HYBRID_EDGE_DELAY_THRESHOLD_MS, 'service_time': {'min_service_time_ms': MIN_SERVICE_TIME_MS, 'nominal_cpu_demand_mi': NOMINAL_CPU_DEMAND_MI}, 'cloud_communication': {'edge_cloud_bandwidth_mbps': EDGE_CLOUD_BANDWIDTH_MBPS, 'result_return_delay_factor': RESULT_RETURN_DELAY_FACTOR, 'min_return_delay_ms': MIN_RETURN_DELAY_MS}, 'cost_energy_proxy': {'edge_cost_per_service_ms': EDGE_COST_PER_SERVICE_MS, 'cloud_cost_per_service_ms': CLOUD_COST_PER_SERVICE_MS, 'network_cost_per_mb': NETWORK_COST_PER_MB, 'edge_energy_per_service_ms': EDGE_ENERGY_PER_SERVICE_MS, 'cloud_energy_per_service_ms': CLOUD_ENERGY_PER_SERVICE_MS, 'network_energy_per_mb': NETWORK_ENERGY_PER_MB}, 'sensitivity_enabled': bool(args.sensitivity), 'sensitivity_scenarios': SENSITIVITY_SCENARIOS, 'sensitivity_capacity_modes': ['hybrid_cloud_edge', 'deadline_aware_hybrid'] if getattr(args, 'sensitivity_all_modes', False) else ['hybrid_cloud_edge'], 'threshold_values_ms': THRESHOLD_VALUES_MS, 'edge_server_values': EDGE_SERVER_VALUES, 'cloud_server_values': CLOUD_SERVER_VALUES, 'edge_queue_values': EDGE_QUEUE_VALUES, 'network_delay_multipliers': NETWORK_DELAY_MULTIPLIERS, 'scipy_available_for_stats': scipy_stats is not None}
     with open(output_dir / 'experiment_configuration.json', 'w', encoding='utf-8') as f:
