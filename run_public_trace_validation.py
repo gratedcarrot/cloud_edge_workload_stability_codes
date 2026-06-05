@@ -130,26 +130,7 @@ def run_simulation() -> None:
 
     create_figures(summary)
 
-    note = """
-Public Trace-Based Validation Result Interpretation
-
-The public trace-derived validation experiment uses task submission events and
-resource request patterns from Google ClusterData 2011-2. The trace is mapped
-into the same cloud-edge simulation model used for the controlled synthetic
-experiments. The objective is to test whether the relative performance trend
-observed in controlled experiments remains consistent under real production
-cloud workload arrival behavior.
-
-This enhanced validation includes edge-only, cloud-only, baseline hybrid, and
-deadline-aware hybrid modes. The deadline-aware mode reports the same response,
-waiting, throughput, queueing, blocking, offloading, and SLA metrics as the
-baseline modes, with additional cost and energy proxy indicators.
-
-The exact numerical values may differ from controlled synthetic results because
-the public trace has its own temporal arrival pattern and resource demand
-distribution. The main validation criterion is trend consistency across
-processing modes.
-""".strip()
+    .strip()
     (OUTPUT_DIR / 'public_trace_result_interpretation_note.txt').write_text(note, encoding='utf-8')
 
     print()
