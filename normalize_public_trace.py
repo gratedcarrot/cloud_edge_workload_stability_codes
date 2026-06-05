@@ -68,6 +68,31 @@ def write_report(original_df: pd.DataFrame, normalized_df: pd.DataFrame) -> None
     report_path.write_text(report, encoding='utf-8')
     print(f'Report written: {report_path}')
 
+def write_updated_public_trace_summary(normalized_df: pd.DataFrame) -> None:
+    """Refresh public_trace_summary.csv after timing normalization.
+
+    This prevents a stale summary file from continuing to report the raw
+    pre-normalization duration and arrival rate.
+    """
+    duration = max(float(normalized_df['arrival_time_s'].max() - normalized_df['arrival_time_s'].min()), 1e-09)
+    summary = pd.DataFrame([{
+        'scenario': 'public_trace_validation',
+        'records': int(len(normalized_df)),
+        'duration_s': round(duration, 3),
+        'observed_arrival_rate_tps': round(len(normalized_df) / duration, 3),
+        'avg_task_size_kb': round(float(normalized_df['task_size_kb'].mean()), 3),
+        'avg_cpu_demand_mi': round(float(normalized_df['cpu_demand_mi'].mean()), 3),
+        'avg_memory_demand_mb': round(float(normalized_df['memory_demand_mb'].mean()), 3),
+        'avg_deadline_ms': round(float(normalized_df['deadline_ms'].mean()), 3),
+        'avg_network_delay_ms': round(float(normalized_df['edge_cloud_network_delay_ms'].mean()), 3),
+        'time_normalized': True,
+        'target_duration_s': TARGET_DURATION_S,
+        'debatching_factor': DEBATCHING_FACTOR,
+    }])
+    summary_path = DATASET_DIR / 'public_trace_summary.csv'
+    summary.to_csv(summary_path, index=False)
+    print(f'Updated normalized summary: {summary_path}')
+
 def update_metadata() -> None:
     metadata_path = DATASET_DIR / 'metadata.json'
     if not metadata_path.exists():
@@ -93,6 +118,7 @@ def main() -> None:
     normalized.to_csv(TRACE_FILE, index=False)
     print(f'Updated normalized dataset: {TRACE_FILE}')
     update_scenario_parameters()
+    write_updated_public_trace_summary(normalized)
     write_report(original, normalized)
     update_metadata()
     print()

@@ -1,0 +1,26 @@
+Recommended execution order
+===========================
+
+1. Install dependencies
+   pip install -r requirements.txt
+
+2. Generate controlled workload traces
+   python generate_workload.py
+
+3. Run controlled simulations
+   python run_simulation.py --no-detailed
+
+4. Run sensitivity analysis
+   python run_simulation.py --sensitivity --no-detailed
+
+5. Build the public trace-derived dataset
+   python build_public_trace_data.py
+
+6. Normalize public trace timing
+   python normalize_public_trace.py
+
+7. Run public trace-derived validation
+   python run_public_trace_validation.py
+
+Optional:
+   python run_simulation.py --sensitivity --sensitivity-all-modes --no-detailed
