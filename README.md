@@ -11,21 +11,22 @@ The code evaluates four processing modes:
 3. `hybrid_cloud_edge`
 4. `deadline_aware_hybrid`
 
-It supports controlled workload generation, controlled simulation, sensitivity analysis, public trace preprocessing, and public trace-derived validation. Cost and energy values are reported as normalized proxy metrics, not real billing or measured energy values.
+It supports controlled workload generation, controlled simulation, analytical validation, sensitivity analysis, public trace preprocessing, and public trace-derived validation. Cost and energy values are reported as normalized proxy metrics, not real billing or measured energy values.
 
 ## Repository contents
 
-| File | Purpose |
-|---|---|
-| `generate_workload.py` | Generates controlled synthetic workloads for low, medium, high, burst, and extended scenarios. |
-| `run_simulation.py` | Runs controlled simulations for all four modes and produces summaries, confidence intervals, statistical tests, and plots. |
-| `run_sensitivity.py` | Runs sensitivity analysis separately after controlled workloads are generated. |
-| `build_public_trace_data.py` | Builds the public trace-derived validation workload from Google ClusterData 2011-2 task events. |
-| `normalize_public_trace.py` | Normalizes public trace timing to the validation window and refreshes the public trace summary. |
-| `run_public_trace_validation.py` | Runs validation on the public trace-derived dataset using the same simulator logic. |
-| `requirements.txt` | Python dependencies. |
-| `RUN_ORDER.txt` | Recommended execution order. |
-| `.gitignore` | Excludes generated data, results, figures, caches, and raw trace downloads. |
+| File                             | Purpose                                                                                                                    |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `generate_workload.py`           | Generates controlled synthetic workloads for low, medium, high, burst, and extended scenarios.                             |
+| `run_simulation.py`              | Runs controlled simulations for all four modes and produces summaries, confidence intervals, statistical tests, and plots. |
+| `analytical_validation.py`       | Compares M/M/c/K analytical estimates with edge-only simulation results for low, medium, and high scenarios.               |
+| `run_sensitivity.py`             | Runs sensitivity analysis separately after controlled workloads are generated.                                             |
+| `build_public_trace_data.py`     | Builds the public trace-derived validation workload from Google ClusterData 2011-2 task events.                            |
+| `normalize_public_trace.py`      | Normalizes public trace timing to the validation window and refreshes the public trace summary.                            |
+| `run_public_trace_validation.py` | Runs validation on the public trace-derived dataset using the same simulator logic.                                        |
+| `requirements.txt`               | Python dependencies.                                                                                                       |
+| `RUN_ORDER.txt`                  | Recommended execution order.                                                                                               |
+| `.gitignore`                     | Excludes generated data, results, figures, caches, and raw trace downloads.                                                |
 
 ## Installation
 
@@ -40,13 +41,14 @@ pip install -r requirements.txt
 ```bash
 python generate_workload.py
 python run_simulation.py --no-detailed
-python run_simulation.py --sensitivity --no-detailed
+python analytical_validation.py
+python run_sensitivity.py
 python build_public_trace_data.py
 python normalize_public_trace.py
 python run_public_trace_validation.py
 ```
 
-The `--no-detailed` flag avoids creating the very large task-level controlled result file. Paper-level summaries and figures can still be generated without it.
+The `--no-detailed` flag avoids creating the very large task-level controlled result file. Paper-level summaries, confidence intervals, statistical tests, and plots can still be generated without it.
 
 ## Optional sensitivity command
 
