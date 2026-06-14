@@ -644,10 +644,50 @@ def generate_controlled_graphs(agg_df: pd.DataFrame, output_dir: Path) -> None:
     plot_metric_grouped(agg_df, 'avg_energy_proxy_mean', 'Average energy proxy', output_dir / 'fig_energy_proxy_with_ci.png', 'avg_energy_proxy_ci95')
 
 def write_method_note(output_dir: Path, args: argparse.Namespace) -> None:
-  
-.strip()
+    note = """
+Cloud-edge workload simulation method note.
+
+The simulator evaluates edge-only, cloud-only, baseline hybrid, and deadline-aware hybrid processing using the same generated workload traces. Results are aggregated across repeated runs and reported with 95% confidence intervals. Statistical testing is performed using one-way ANOVA and Kruskal-Wallis tests where scipy is available.
+""".strip()
+
     (output_dir / 'simulation_method_note.txt').write_text(note, encoding='utf-8')
-    config = {'input_dir': str(args.input_dir), 'output_dir': str(args.output_dir), 'baseline_hybrid_threshold_ms': HYBRID_EDGE_DELAY_THRESHOLD_MS, 'service_time': {'min_service_time_ms': MIN_SERVICE_TIME_MS, 'nominal_cpu_demand_mi': NOMINAL_CPU_DEMAND_MI}, 'cloud_communication': {'edge_cloud_bandwidth_mbps': EDGE_CLOUD_BANDWIDTH_MBPS, 'result_return_delay_factor': RESULT_RETURN_DELAY_FACTOR, 'min_return_delay_ms': MIN_RETURN_DELAY_MS}, 'cost_energy_proxy': {'edge_cost_per_service_ms': EDGE_COST_PER_SERVICE_MS, 'cloud_cost_per_service_ms': CLOUD_COST_PER_SERVICE_MS, 'network_cost_per_mb': NETWORK_COST_PER_MB, 'edge_energy_per_service_ms': EDGE_ENERGY_PER_SERVICE_MS, 'cloud_energy_per_service_ms': CLOUD_ENERGY_PER_SERVICE_MS, 'network_energy_per_mb': NETWORK_ENERGY_PER_MB}, 'sensitivity_enabled': bool(args.sensitivity), 'sensitivity_scenarios': SENSITIVITY_SCENARIOS, 'sensitivity_capacity_modes': ['hybrid_cloud_edge', 'deadline_aware_hybrid'] if getattr(args, 'sensitivity_all_modes', False) else ['hybrid_cloud_edge'], 'threshold_values_ms': THRESHOLD_VALUES_MS, 'edge_server_values': EDGE_SERVER_VALUES, 'cloud_server_values': CLOUD_SERVER_VALUES, 'edge_queue_values': EDGE_QUEUE_VALUES, 'network_delay_multipliers': NETWORK_DELAY_MULTIPLIERS, 'scipy_available_for_stats': scipy_stats is not None}
+
+    config = {
+        'input_dir': str(args.input_dir),
+        'output_dir': str(args.output_dir),
+        'baseline_hybrid_threshold_ms': HYBRID_EDGE_DELAY_THRESHOLD_MS,
+        'service_time': {
+            'min_service_time_ms': MIN_SERVICE_TIME_MS,
+            'nominal_cpu_demand_mi': NOMINAL_CPU_DEMAND_MI,
+        },
+        'cloud_communication': {
+            'edge_cloud_bandwidth_mbps': EDGE_CLOUD_BANDWIDTH_MBPS,
+            'result_return_delay_factor': RESULT_RETURN_DELAY_FACTOR,
+            'min_return_delay_ms': MIN_RETURN_DELAY_MS,
+        },
+        'cost_energy_proxy': {
+            'edge_cost_per_service_ms': EDGE_COST_PER_SERVICE_MS,
+            'cloud_cost_per_service_ms': CLOUD_COST_PER_SERVICE_MS,
+            'network_cost_per_mb': NETWORK_COST_PER_MB,
+            'edge_energy_per_service_ms': EDGE_ENERGY_PER_SERVICE_MS,
+            'cloud_energy_per_service_ms': CLOUD_ENERGY_PER_SERVICE_MS,
+            'network_energy_per_mb': NETWORK_ENERGY_PER_MB,
+        },
+        'sensitivity_enabled': bool(args.sensitivity),
+        'sensitivity_scenarios': SENSITIVITY_SCENARIOS,
+        'sensitivity_capacity_modes': (
+            ['hybrid_cloud_edge', 'deadline_aware_hybrid']
+            if getattr(args, 'sensitivity_all_modes', False)
+            else ['hybrid_cloud_edge']
+        ),
+        'threshold_values_ms': THRESHOLD_VALUES_MS,
+        'edge_server_values': EDGE_SERVER_VALUES,
+        'cloud_server_values': CLOUD_SERVER_VALUES,
+        'edge_queue_values': EDGE_QUEUE_VALUES,
+        'network_delay_multipliers': NETWORK_DELAY_MULTIPLIERS,
+        'scipy_available_for_stats': scipy_stats is not None,
+    }
+
     with open(output_dir / 'experiment_configuration.json', 'w', encoding='utf-8') as f:
         json.dump(config, f, indent=2)
 
