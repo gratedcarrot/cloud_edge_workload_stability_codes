@@ -1,5 +1,4 @@
 # Generated workload and result folders
-
 generated_workload/
 simulation_results/
 public_trace_data/
@@ -7,27 +6,23 @@ public_trace_results/
 trace_downloads/
 
 # Large trace/download files
-
 *.csv.gz
 
 # Python cache files
-
-_pycache_/
+__pycache__/
 *.py[cod]
 *$py.class
 
 # Virtual environments
-
 venv/
+.env
 .env/
 .venv/
 
 # Jupyter/checkpoint files
-
 .ipynb_checkpoints/
 
 # OS/editor files
-
 .DS_Store
 Thumbs.db
 .vscode/
