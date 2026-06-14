@@ -129,9 +129,18 @@ def run_simulation() -> None:
     paper_ci_table.to_csv(OUTPUT_DIR / 'public_trace_paper_results_table_with_ci.csv', index=False)
 
     create_figures(summary)
+    note = """
+    Public trace validation interpretation note.
 
-    .strip()
-    (OUTPUT_DIR / 'public_trace_result_interpretation_note.txt').write_text(note, encoding='utf-8')
+    The public trace validation uses Google ClusterData-derived task arrivals and resource demand patterns mapped into the cloud-edge simulator format. The source trace is not a native cloud-edge trace, so edge/cloud queue parameters, network delay, and routing rules are supplied by the proposed simulation model.
+
+    The resulting validation is intended to test whether the proposed routing behaviour remains consistent under a realistic task-arrival sequence and resource-demand distribution, rather than to claim direct deployment measurement on a physical cloud-edge testbed.
+""".strip()
+
+    (OUTPUT_DIR / 'public_trace_result_interpretation_note.txt').write_text(
+        note,
+        encoding='utf-8'
+    )
 
     print()
     print('Public trace validation simulation completed.')
