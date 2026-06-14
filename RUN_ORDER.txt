@@ -1,5 +1,4 @@
-Recommended execution order
-===========================
+# Recommended execution order
 
 1. Install dependencies
    pip install -r requirements.txt
@@ -10,17 +9,20 @@ Recommended execution order
 3. Run controlled simulations
    python run_simulation.py --no-detailed
 
-4. Run sensitivity analysis
-   python run_simulation.py --sensitivity --no-detailed
+4. Run analytical validation
+   python analytical_validation.py
 
-5. Build the public trace-derived dataset
+5. Run sensitivity analysis
+   python run_sensitivity.py
+
+6. Build the public trace-derived dataset
    python build_public_trace_data.py
 
-6. Normalize public trace timing
+7. Normalize public trace timing
    python normalize_public_trace.py
 
-7. Run public trace-derived validation
+8. Run public trace-derived validation
    python run_public_trace_validation.py
 
 Optional:
-   python run_simulation.py --sensitivity --sensitivity-all-modes --no-detailed
+python run_simulation.py --sensitivity --sensitivity-all-modes --no-detailed
