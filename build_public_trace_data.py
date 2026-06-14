@@ -100,7 +100,13 @@ def map_to_cloud_edge_format(raw_df: pd.DataFrame) -> pd.DataFrame:
         df['arrival_time_s'] = np.arange(len(df)) * 0.001
         df['inter_arrival_time_s'] = df['arrival_time_s'].diff().fillna(0)
     df['task_type'] = df['scheduling_class'].astype(int).map({0: 'background_task', 1: 'batch_job', 2: 'analytics_task', 3: 'service_task'}).fillna('compute_task')
-    df['priority_mapped'] = pd.cut(df['priority'], bins=[-1, 1, 4, 8, 100], labels=[1, 2, 3, 4]).astype(int)
+   priority_bucket = pd.cut(
+    df['priority'].clip(lower=0, upper=100),
+    bins=[-1, 1, 4, 8, 100],
+    labels=[1, 2, 3, 4],
+)
+
+df['priority_mapped'] = priority_bucket.astype(float).fillna(1).astype(int)
     cpu = df['resource_request_cpu'].clip(lower=0)
     mem = df['resource_request_memory'].clip(lower=0)
     disk = df['resource_request_disk'].clip(lower=0)
