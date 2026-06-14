@@ -12,7 +12,7 @@ trace_downloads/
 
 # Python cache files
 
-**pycache**/
+_pycache_/
 *.py[cod]
 *$py.class
 
