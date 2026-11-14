@@ -1,0 +1,19 @@
+{
+  "comparisons": 54,
+  "task_evaluations_against_reference": 27780,
+  "max_absolute_per_task_numeric_error": 0.0,
+  "categories_exact": true,
+  "all_common_summary_fields_checked": true,
+  "decision_reasons_covered": [
+    "deadline_override_to_edge",
+    "edge_busy_fraction_threshold",
+    "fixed_cloud",
+    "fixed_edge",
+    "hybrid_queue_and_response_rule",
+    "least_predicted_lateness",
+    "minimum_current_jobs_per_server",
+    "paper_network_utilization_rule_adapted",
+    "predicted_capacity_fallback",
+    "proxy_tie_break_to_edge"
+  ]
+}

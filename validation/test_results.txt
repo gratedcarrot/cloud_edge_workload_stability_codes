@@ -1,0 +1,46 @@
+test_capacity_stage_can_be_removed_without_enabling_other_stages (test_deadline_rules.AblationTests.test_capacity_stage_can_be_removed_without_enabling_other_stages) ... ok
+test_equal_lateness_leaves_route_unchanged (test_deadline_rules.AblationTests.test_equal_lateness_leaves_route_unchanged) ... ok
+test_invalid_switches_rejected (test_deadline_rules.AblationTests.test_invalid_switches_rejected) ... ok
+test_least_lateness_bypasses_wait_gate_when_both_routes_miss (test_deadline_rules.AblationTests.test_least_lateness_bypasses_wait_gate_when_both_routes_miss) ... ok
+test_proxy_tie_only_changes_close_and_slack_feasible_decision (test_deadline_rules.AblationTests.test_proxy_tie_only_changes_close_and_slack_feasible_decision) ... ok
+test_removing_feasibility_override_leaves_one_feasible_route_branch_untouched (test_deadline_rules.AblationTests.test_removing_feasibility_override_leaves_one_feasible_route_branch_untouched) ... ok
+test_cloud_arrival_precedes_source_decision_at_same_timestamp (test_reference_engine.EventEngineTests.test_cloud_arrival_precedes_source_decision_at_same_timestamp) ... ok
+test_cloud_rejection_retains_consumed_upload_proxy (test_reference_engine.EventEngineTests.test_cloud_rejection_retains_consumed_upload_proxy) ... ok
+test_configured_observation_horizon_bounds_utilization_and_throughput (test_reference_engine.EventEngineTests.test_configured_observation_horizon_bounds_utilization_and_throughput) ... ok
+test_current_cloud_congestion_changes_hybrid_decision (test_reference_engine.EventEngineTests.test_current_cloud_congestion_changes_hybrid_decision) ... ok
+test_deadline_equality_counts_as_success (test_reference_engine.EventEngineTests.test_deadline_equality_counts_as_success) ... ok
+test_every_policy_can_use_idle_servers_with_no_waiting_slots (test_reference_engine.EventEngineTests.test_every_policy_can_use_idle_servers_with_no_waiting_slots) ... ok
+test_finite_waiting_buffer_and_same_time_release (test_reference_engine.EventEngineTests.test_finite_waiting_buffer_and_same_time_release) ... ok
+test_forecasting_inflight_job_does_not_reserve_real_cloud_in_future (test_reference_engine.EventEngineTests.test_forecasting_inflight_job_does_not_reserve_real_cloud_in_future) ... ok
+test_future_cloud_forecast_does_not_purge_current_waiting_job (test_reference_engine.EventEngineTests.test_future_cloud_forecast_does_not_purge_current_waiting_job) ... ok
+test_idle_edge_executes_without_queueing (test_reference_engine.EventEngineTests.test_idle_edge_executes_without_queueing) ... ok
+test_independent_link_has_no_shared_upload_queue (test_reference_engine.EventEngineTests.test_independent_link_has_no_shared_upload_queue) ... ok
+test_independent_transfer_can_reverse_cloud_arrival_order (test_reference_engine.EventEngineTests.test_independent_transfer_can_reverse_cloud_arrival_order) ... ok
+test_inflight_forecast_respects_cloud_waiting_capacity (test_reference_engine.EventEngineTests.test_inflight_forecast_respects_cloud_waiting_capacity) ... ok
+test_load_baseline_counts_busy_and_waiting_jobs_per_server (test_reference_engine.EventEngineTests.test_load_baseline_counts_busy_and_waiting_jobs_per_server) ... ok
+test_network_baseline_virtual_probe_and_threshold_boundary (test_reference_engine.EventEngineTests.test_network_baseline_virtual_probe_and_threshold_boundary) ... ok
+test_return_delay_does_not_keep_cloud_server_busy (test_reference_engine.EventEngineTests.test_return_delay_does_not_keep_cloud_server_busy) ... ok
+test_shared_bandwidth_change_changes_exact_upload_times (test_reference_engine.EventEngineTests.test_shared_bandwidth_change_changes_exact_upload_times) ... ok
+test_shared_fcfs_link_serializes_uploads (test_reference_engine.EventEngineTests.test_shared_fcfs_link_serializes_uploads) ... ok
+test_task_conservation_and_response_identity_for_every_policy (test_reference_engine.EventEngineTests.test_task_conservation_and_response_identity_for_every_policy) ... ok
+test_utilization_baseline_keeps_threshold_equality_at_edge (test_reference_engine.EventEngineTests.test_utilization_baseline_keeps_threshold_equality_at_edge) ... ok
+test_zero_waiting_buffer_accepts_idle_server_and_rejects_busy_server (test_reference_engine.EventEngineTests.test_zero_waiting_buffer_accepts_idle_server_and_rejects_busy_server) ... ok
+test_initial_state_excluded_and_true_burst_gaps_preserved (test_trace_extraction.TraceExtractionTests.test_initial_state_excluded_and_true_burst_gaps_preserved) ... ok
+test_insufficient_records_do_not_silently_shorten_requested_sample (test_trace_extraction.TraceExtractionTests.test_insufficient_records_do_not_silently_shorten_requested_sample) ... ok
+test_mapping_rejects_zero_initialization_and_degenerate_real_window (test_trace_extraction.TraceExtractionTests.test_mapping_rejects_zero_initialization_and_degenerate_real_window) ... ok
+test_partition_without_valid_arrivals_does_not_create_fake_events (test_trace_extraction.TraceExtractionTests.test_partition_without_valid_arrivals_does_not_create_fake_events) ... ok
+test_row_and_download_limits_fail_explicitly (test_trace_extraction.TraceExtractionTests.test_row_and_download_limits_fail_explicitly) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.227s
+
+OK
+Scanned 7 rows from <temporary directory>/part.csv.gz; selected 4
+Scanned 2 rows from <temporary directory>/input.csv; selected 1
+Scanned 2 rows from <temporary directory>/a.csv; selected 0
+Scanned 2 rows from <temporary directory>/b.csv; selected 2
+
+Running check_backend.py
+{'comparisons': 54, 'task_evaluations_against_reference': 27780, 'max_absolute_per_task_numeric_error': 0.0, 'categories_exact': True, 'all_common_summary_fields_checked': True, 'decision_reasons_covered': ['deadline_override_to_edge', 'edge_busy_fraction_threshold', 'fixed_cloud', 'fixed_edge', 'hybrid_queue_and_response_rule', 'least_predicted_lateness', 'minimum_current_jobs_per_server', 'paper_network_utilization_rule_adapted', 'predicted_capacity_fallback', 'proxy_tie_break_to_edge']}
+
+Finished. Generated files: <repository>/outputs

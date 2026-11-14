@@ -1,0 +1,6 @@
+{
+  "main_policy_cells": 24,
+  "google_policy_cells": 3,
+  "spatial_pool_check": true,
+  "reference_metrics_match": true
+}

@@ -1,0 +1,141 @@
+{
+  "checksummed_files": 0,
+  "synthetic_inputs_checked": 150,
+  "main_runs": 3600,
+  "matched_main_conditions": 450,
+  "google_mapping_evaluations": 720,
+  "google_coefficient_evaluations": 1248,
+  "table_VIII_comparisons": 40,
+  "table_VIII_policies": 4,
+  "locality_evaluations": 3360,
+  "mmck_replications": 90,
+  "all_checks_passed": true,
+  "regenerated_files": [
+    {
+      "file": "main/runs.csv",
+      "rows": 3600,
+      "numeric_columns": 42,
+      "matched": true
+    },
+    {
+      "file": "main/paired_primary.csv",
+      "rows": 75,
+      "numeric_columns": 12,
+      "matched": true
+    },
+    {
+      "file": "main/policy_summary.csv",
+      "rows": 120,
+      "numeric_columns": 107,
+      "matched": true
+    },
+    {
+      "file": "sensitivity/sweep_runs.csv",
+      "rows": 1200,
+      "numeric_columns": 44,
+      "matched": true
+    },
+    {
+      "file": "sensitivity/capacity_runs.csv",
+      "rows": 1440,
+      "numeric_columns": 44,
+      "matched": true
+    },
+    {
+      "file": "google/base_outcomes_20k.csv",
+      "rows": 48,
+      "numeric_columns": 45,
+      "matched": true
+    },
+    {
+      "file": "google/mapping_sensitivity_20k.csv",
+      "rows": 720,
+      "numeric_columns": 45,
+      "matched": true
+    },
+    {
+      "file": "google/coefficient_sensitivity_20k.csv",
+      "rows": 1248,
+      "numeric_columns": 42,
+      "matched": true
+    },
+    {
+      "file": "synthetic_proxy/proxy_runs.csv",
+      "rows": 3744,
+      "numeric_columns": 55,
+      "matched": true
+    },
+    {
+      "file": "locality/run_results.csv",
+      "rows": 3360,
+      "numeric_columns": 15,
+      "matched": true
+    },
+    {
+      "file": "locality/condition_means.csv",
+      "rows": 112,
+      "numeric_columns": 6,
+      "matched": true
+    },
+    {
+      "file": "locality/paired_contrasts.csv",
+      "rows": 144,
+      "numeric_columns": 6,
+      "matched": true
+    },
+    {
+      "file": "analytical/mmck_runs.csv",
+      "rows": 90,
+      "numeric_columns": 18,
+      "matched": true
+    },
+    {
+      "file": "analytical/mmck_comparison.csv",
+      "rows": 24,
+      "numeric_columns": 12,
+      "matched": true
+    },
+    {
+      "file": "analytical/mmck_state_probabilities.csv",
+      "rows": 39,
+      "numeric_columns": 6,
+      "matched": true
+    },
+    {
+      "file": "analytical/workload_assumptions_runs.csv",
+      "rows": 152,
+      "numeric_columns": 36,
+      "matched": true
+    },
+    {
+      "file": "analytical/workload_assumptions_summary.csv",
+      "rows": 170,
+      "numeric_columns": 5,
+      "matched": true
+    },
+    {
+      "file": "tables/secondary_four_policy_tests.csv",
+      "rows": 40,
+      "numeric_columns": 10,
+      "matched": true
+    },
+    {
+      "file": "tables/secondary_baselines.csv",
+      "rows": 90,
+      "numeric_columns": 7,
+      "matched": true
+    },
+    {
+      "file": "tables/main_original_metrics_ci.csv",
+      "rows": 1080,
+      "numeric_columns": 6,
+      "matched": true
+    },
+    {
+      "file": "tables/sensitivity_original_metrics_ci.csv",
+      "rows": 792,
+      "numeric_columns": 6,
+      "matched": true
+    }
+  ]
+}

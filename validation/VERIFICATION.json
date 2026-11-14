@@ -1,0 +1,51 @@
+{
+  "unit_tests_passed": 32,
+  "native_reference_cases": 54,
+  "reference_task_evaluations": 27780,
+  "native_reference_max_per_task_absolute_error": 0.0,
+  "regenerated_result_csv_files": 21,
+  "regenerated_comparison_rows": 18288,
+  "comparison_relative_tolerance": 1e-10,
+  "comparison_absolute_tolerance": 1e-08,
+  "synthetic_workloads_regenerated": 150,
+  "synthetic_task_records": 1082065,
+  "regenerated_synthetic_file_hashes_match": true,
+  "main_experiment_rows": 3600,
+  "google_mapping_rows": 720,
+  "google_coefficient_rows": 1248,
+  "static_locality_rows": 3360,
+  "isolated_queue_replications": 90,
+  "table_VIII_policies": 4,
+  "table_VIII_metric_scenario_tests": 40,
+  "figures_regenerated": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "figure_pngs_visually_checked": true,
+  "scientific_cores": [
+    {
+      "path": "engine/study_engine.cpp",
+      "sha256": "b527f2633d2701e344e6f353020b2908b1e08b8ec5331c9592fdb3d214b6fffe",
+      "scientific_core_unchanged": true
+    },
+    {
+      "path": "engine/study_engine.py",
+      "sha256": "588b604927e83ba7e48e7c15611cd3a946859370cff769369adb1dd59b30eea5",
+      "scientific_core_unchanged": true
+    },
+    {
+      "path": "engine/reference/frozen_policy_engine.py",
+      "sha256": "8aa3b010605ac6d4c1dd3e70d6cf183b80770e51aac946fa9af406cf86a7de6c",
+      "scientific_core_unchanged": true
+    },
+    {
+      "path": "engine/spatial_engine.cpp",
+      "sha256": "6767f7b101748dfc170217c5be61d53e226e48a00dcfae29395d92e982efcc5a",
+      "scientific_core_unchanged": true
+    }
+  ],
+  "online_repository_modified": false
+}
