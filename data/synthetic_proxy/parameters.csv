@@ -1,0 +1,3 @@
+scenario,description,duration_s,base_lambda_tps,burst_start_s,burst_end_s,burst_lambda_tps,heavy_tailed_demand,edge_nodes,edge_service_rate_tps_each,cloud_servers,cloud_service_rate_tps_each,edge_queue_capacity,cloud_queue_capacity,mean_network_delay_ms,std_network_delay_ms,runs_per_scenario,base_random_seed,total_edge_capacity_tps,total_cloud_capacity_tps,total_system_capacity_tps
+high_load,Overload condition where arrival rate exceeds edge capacity.,300,40,,,,False,4,7,3,18,120,250,55,12,3,810217,28,54,82
+burst_load,Normal workload with temporary large-scale burst demand.,300,14,100.0,160.0,55.0,False,4,7,3,18,120,250,60,15,3,810217,28,54,82
