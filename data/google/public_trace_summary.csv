@@ -1,0 +1,2 @@
+scenario,records,duration_s,observed_arrival_rate_tps,avg_task_size_kb,avg_cpu_demand_mi,avg_memory_demand_mb,avg_deadline_ms,avg_network_delay_ms,time_normalized
+public_trace_validation,20000,1535.418,13.026,142.985,70.616,165.418,847.235,67.92,False

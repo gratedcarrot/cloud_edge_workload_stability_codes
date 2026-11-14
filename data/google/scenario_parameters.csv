@@ -1,0 +1,2 @@
+scenario,description,duration_s,base_lambda_tps,burst_start_s,burst_end_s,burst_lambda_tps,edge_nodes,edge_service_rate_tps_each,cloud_servers,cloud_service_rate_tps_each,edge_queue_capacity,cloud_queue_capacity,mean_network_delay_ms,std_network_delay_ms,total_edge_capacity_tps,total_cloud_capacity_tps,total_system_capacity_tps
+public_trace_validation,Google ClusterData 2011 task_events-derived validation workload,1535.418213,13.025767071580256,,,,4,7,3,18,120,250,55,0,28,54,82

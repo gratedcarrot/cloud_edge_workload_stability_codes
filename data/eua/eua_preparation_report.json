@@ -1,0 +1,84 @@
+{
+  "role": "geometric_preparation_only_no_compute_or_latency_evaluation",
+  "source_commit": "61238e00a6f01019c8a6ba1619675337a879a3d4",
+  "source_files": {
+    "edge-servers/site-optus-melbCBD.csv": {
+      "sha256": "c1031a8ff0f110e179beeabfaea53d42c15f30b0daf6c6522e8f17789c3979fb",
+      "url": "https://raw.githubusercontent.com/PhuLai/eua-dataset/61238e00a6f01019c8a6ba1619675337a879a3d4/edge-servers/site-optus-melbCBD.csv"
+    },
+    "users/users-melbcbd-generated.csv": {
+      "sha256": "4ab470ecc719b410f7505ca1362c2a32317c0f0a4c429b349ea34aaa7c2c03f0",
+      "url": "https://raw.githubusercontent.com/PhuLai/eua-dataset/61238e00a6f01019c8a6ba1619675337a879a3d4/users/users-melbcbd-generated.csv"
+    },
+    "edge-servers/README.md": {
+      "sha256": "65d7b437ce89941a7c31a233e23c5cf086376439569ccc084c5f3b221c5ba682",
+      "url": "https://raw.githubusercontent.com/PhuLai/eua-dataset/61238e00a6f01019c8a6ba1619675337a879a3d4/edge-servers/README.md"
+    },
+    "users/README.md": {
+      "sha256": "7fcc0b794411fb78cce55f81d71206c2889229292651d94d00411f97074ae4c5",
+      "url": "https://raw.githubusercontent.com/PhuLai/eua-dataset/61238e00a6f01019c8a6ba1619675337a879a3d4/users/README.md"
+    }
+  },
+  "sites": 125,
+  "generated_users": 816,
+  "all_input_rows_preserved": true,
+  "earth_radius_m": 6371008.8,
+  "distance_formula": "great-circle haversine on declared sphere; no network/path/latency inference",
+  "distance_storage_rounding": "CSV12 significant digits; eligibility uses full precision",
+  "tie_break": "ascending numeric SITE_ID",
+  "nearest_distance_m_quantiles": {
+    "0": 1.3431819214943421,
+    "0.25": 38.00785164454878,
+    "0.5": 62.14895780275358,
+    "0.75": 88.64550616426365,
+    "0.95": 122.57443495016165,
+    "0.99": 150.11183812784614,
+    "1": 184.62945538282574
+  },
+  "nearest_assignment_site_counts": {
+    "sites_assigned_at_least_one_generated_user": 120,
+    "sites_assigned_no_generated_users": 5,
+    "maximum_generated_users_at_one_site": 24,
+    "sum_generated_users": 816
+  },
+  "coverage_diagnostics": [
+    {
+      "assumed_radius_m": 450,
+      "generated_users": 816,
+      "candidate_sites": 125,
+      "users_with_eligible_site": 816,
+      "users_without_eligible_site": 0,
+      "eligibility_fraction": 1.0,
+      "eligible_sites_per_user_min": 9,
+      "eligible_sites_per_user_median": 32.0,
+      "eligible_sites_per_user_max": 54,
+      "interpretation": "assumed_disk_eligibility_not_observed_radio_coverage"
+    },
+    {
+      "assumed_radius_m": 600,
+      "generated_users": 816,
+      "candidate_sites": 125,
+      "users_with_eligible_site": 816,
+      "users_without_eligible_site": 0,
+      "eligibility_fraction": 1.0,
+      "eligible_sites_per_user_min": 16,
+      "eligible_sites_per_user_median": 49.0,
+      "eligible_sites_per_user_max": 79,
+      "interpretation": "assumed_disk_eligibility_not_observed_radio_coverage"
+    },
+    {
+      "assumed_radius_m": 750,
+      "generated_users": 816,
+      "candidate_sites": 125,
+      "users_with_eligible_site": 816,
+      "users_without_eligible_site": 0,
+      "eligibility_fraction": 1.0,
+      "eligible_sites_per_user_min": 29,
+      "eligible_sites_per_user_median": 69.0,
+      "eligible_sites_per_user_max": 95,
+      "interpretation": "assumed_disk_eligibility_not_observed_radio_coverage"
+    }
+  ],
+  "capacity_warning": "No125-fold multiplication of the frozen4-server edge budget. Physical per-site simulation must explicitly allocate a fixed total capacity/buffer budget or declare a new budget scenario, identical for all policies.",
+  "network_warning": "Location, assumed circular eligibility and task assignment do not establish actual wireless coverage, measured delay, mobility, or cloud connectivity."
+}

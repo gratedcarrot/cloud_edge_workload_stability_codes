@@ -1,0 +1,126 @@
+source_row_1based,candidate_site_id,latitude_deg,longitude_deg,source_coordinate_precision_note,site_evidence
+1,10003026,-37.81517,144.97476,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+2,10003027,-37.81524,144.95256,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+3,10003238,-37.81239,144.9712,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+4,10004167,-37.816790000000005,144.96918,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+5,10004576,-37.81808,144.95692,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+6,101373,-37.811269,144.957909,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+7,101381,-37.809081,144.96893,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+8,101385,-37.815461,144.962656,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+9,101636,-37.81285,144.955026,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+10,11571,-37.816356,144.962313,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+11,11579,-37.818071,144.957211,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+12,11581,-37.818202,144.954367,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+13,11590,-37.814225,144.971971,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+14,11591,-37.815975,144.955905,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+15,11593,-37.815493,144.95671399999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+16,11599,-37.81852,144.95714099999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+17,11600,-37.817303,144.962344,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+18,11601,-37.818162,144.959934,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+19,130005,-37.813381,144.95961200000002,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+20,130439,-37.812084000000006,144.967997,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+21,134245,-37.818494,144.957705,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+22,134317,-37.812122,144.97071,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+23,134329,-37.811625,144.96491899999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+24,134360,-37.814263,144.972105,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+25,134386,-37.815549,144.966686,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+26,134403,-37.818166,144.964831,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+27,134449,-37.817384,144.959217,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+28,134453,-37.814896000000005,144.971668,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+29,134454,-37.811126,144.96211599999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+30,134547,-37.818656,144.956626,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+31,134554,-37.817261,144.962515,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+32,134565,-37.812845,144.968248,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+33,134574,-37.811978,144.96238799999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+34,134680,-37.812723,144.960164,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+35,134733,-37.813463,144.973217,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+36,134754,-37.810996,144.967095,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+37,134822,-37.814989,144.96090800000002,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+38,134857,-37.82091,144.955155,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+39,134872,-37.820123,144.957552,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+40,134901,-37.812899,144.959886,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+41,134906,-37.811678,144.962783,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+42,134923,-37.819576,144.95985,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+43,134941,-37.817069,144.961828,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+44,134980,-37.818218,144.96070500000002,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+45,134990,-37.809885,144.963286,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+46,135009,-37.815196,144.96296999999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+47,135011,-37.812799,144.954686,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+48,135045,-37.811928,144.956414,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+49,135073,-37.816011,144.972058,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+50,135143,-37.814431,144.954653,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+51,135213,-37.810382,144.971223,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+52,135231,-37.816467,144.958334,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+53,135237,-37.815777,144.970508,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+54,135253,-37.812578,144.96531399999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+55,135306,-37.81607,144.957254,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+56,135330,-37.814398,144.96632,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+57,135390,-37.813963,144.957301,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+58,206082,-37.816158,144.96070600000002,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+59,301205,-37.817779,144.95596899999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+60,301208,-37.818018,144.964596,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+61,301240,-37.812857,144.96843,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+62,301361,-37.811627,144.965056,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+63,301382,-37.816122,144.964421,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+64,301383,-37.813447,144.966028,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+65,301386,-37.815488,144.966824,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+66,301388,-37.814765,144.969286,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+67,301393,-37.812088,144.97083600000002,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+68,301645,-37.816206,144.966634,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+69,301658,-37.819471,144.960069,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+70,301895,-37.810219,144.9618,Within 100 meters,ACMA_radio_base_station_candidate_not_verified_compute
+71,301896,-37.809538,144.964091,Within 100 meters,ACMA_radio_base_station_candidate_not_verified_compute
+72,302516,-37.812653000000005,144.956622,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+73,302517,-37.811251,144.964157,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+74,302571,-37.81354,144.971421,Within 100 meters,ACMA_radio_base_station_candidate_not_verified_compute
+75,302854,-37.809969,144.97078,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+76,302923,-37.809264,144.971708,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+77,303255,-37.812711,144.959971,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+78,303652,-37.81653,144.961967,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+79,303676,-37.815387,144.96881499999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+80,303710,-37.81751,144.959237,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+81,303712,-37.814257,144.96337,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+82,304060,-37.809041,144.97182800000002,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+83,304363,-37.820744,144.955485,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+84,304364,-37.817483,144.959445,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+85,304365,-37.812934000000006,144.952075,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+86,304366,-37.812343,144.954135,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+87,304368,-37.811533,144.972614,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+88,304369,-37.813573,144.97340400000002,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+89,304370,-37.815793,144.958295,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+90,304371,-37.818474,144.956805,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+91,304434,-37.814395000000005,144.963537,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+92,304562,-37.815891,144.958861,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+93,304744,-37.815195,144.974409,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+94,305394,-37.815371,144.973076,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+95,306249,-37.818151,144.96081,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+96,34603,-37.816299,144.95902,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+97,404118,-37.814905,144.95491299999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+98,41660,-37.816209,144.961635,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+99,42987,-37.812379,144.956402,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+100,44101,-37.816822,144.963209,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+101,44125,-37.815309,144.969476,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+102,461423,-37.809356,144.970729,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+103,47316,-37.811313,144.972958,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+104,49630,-37.810641,144.970534,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+105,49873,-37.810911,144.96268999999998,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+106,50151,-37.810065,144.963281,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+107,50226,-37.811398,144.972672,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+108,50669,-37.816891,144.961957,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+109,50686,-37.813545,144.971705,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+110,51576,-37.814265,144.971685,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+111,51590,-37.815992,144.961028,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+112,51622,-37.814484,144.9635,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+113,51718,-37.813167,144.965468,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+114,53003,-37.81922,144.958485,Unknown,ACMA_radio_base_station_candidate_not_verified_compute
+115,9001289,-37.815858,144.954818,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+116,9002262,-37.816217,144.970928,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+117,9009843,-37.810269,144.96986299999998,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+118,9009844,-37.819101,144.954229,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+119,9009845,-37.811022,144.959234,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+120,9013096,-37.81215,144.96195500000002,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+121,9014605,-37.816496,144.96509,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+122,9014611,-37.815296,144.958369,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+123,9014989,-37.81631,144.964351,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+124,9015396,-37.817386,144.96123,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute
+125,9026103,-37.813175,144.952919,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute

@@ -1,0 +1,94 @@
+{
+  "dataset_name": "Google datacenter trace-derived cloud-edge simulation input",
+  "created_utc": "2026-11-03T18:27:33.169559+00:00",
+  "experiment_role": "simulation_input",
+  "source_dataset": "Google ClusterData 2011-2 task_events",
+  "source_url": "https://commondatastorage.googleapis.com/clusterdata-2011-2/",
+  "source_documentation": "https://github.com/google/cluster-data/blob/master/ClusterData2011_2.md",
+  "selected_records": 20000,
+  "selection_method": "First requested submit events (event_type=0) in supplied partition order, at/after documented observation start; stable timestamp ordering",
+  "documented_observation_start_us": 600000000,
+  "record_limit_may_truncate_final_timestamp_batch": true,
+  "time_normalization": {
+    "applied": false
+  },
+  "arrival_span_s": 1535.418213,
+  "distinct_arrival_timestamps": 20000,
+  "simultaneous_arrival_gaps": 0,
+  "extraction": {
+    "sources": [
+      {
+        "source": "https://commondatastorage.googleapis.com/clusterdata-2011-2/task_events/part-00000-of-00500.csv.gz",
+        "selected_records": 20000,
+        "scanned_rows": 332311,
+        "excluded_before_observation_window": 277321,
+        "excluded_non_submit": 34990,
+        "excluded_malformed": 0,
+        "complete_source_read": false,
+        "source_bytes_read": 2818058,
+        "source_prefix_sha256": "ad517741a98393858c3d71328e0ef744645d3a3859140107d197ac0132cd08b3",
+        "checksum_scope": "Bytes consumed from source; partial when complete_source_read is false"
+      }
+    ],
+    "requested_records": 20000,
+    "start_us": 600000000,
+    "source_bytes_read": 2818058,
+    "uncompressed_bytes_processed": 34997920,
+    "scanned_rows": 332311,
+    "elapsed_s": 7.741,
+    "limits": {
+      "max_source_bytes": 67108864,
+      "max_uncompressed_bytes": 536870912,
+      "max_rows": 3000000,
+      "max_seconds": 120.0
+    }
+  },
+  "mapping": {
+    "observed_source_fields": [
+      "time",
+      "job_id",
+      "task_index",
+      "priority",
+      "scheduling_class",
+      "resource_request_cpu",
+      "resource_request_memory",
+      "resource_request_disk"
+    ],
+    "arrival_time_s": "(observed timestamp_us - first retained timestamp_us) / 1e6; no jitter or invented spacing",
+    "cpu_demand_mi": "50 + 600*CPU_request + 200*memory_request; assumed conversion, not measured instructions",
+    "memory_demand_mb": "64 + 4096*memory_request; assumed conversion and metadata, not an enforced RAM admission limit",
+    "task_size_kb": "64 + 2048*CPU_request + 1024*memory_request + 512*disk_request; assumed transfer size",
+    "priority": "Original priority clipped to [0,100], bucketed using cutpoints [-1,1,4,8,100] into [1,2,3,4]",
+    "deadline_ms": "250 + 150*(4-priority_bucket) + 100*(3-clip(scheduling_class,0,3)); synthetic deadline",
+    "task_type": "Descriptive analyst labels inferred from scheduling_class; not measured application identity",
+    "source_zone_and_edge_candidate": "job_id modulo 4; synthetic labels, not measured location or mobility",
+    "edge_cloud_network_delay_ms": "45 + 25*clip(task_size_kb / p95(task_size_kb),0,1); modeled delay, not measured network performance",
+    "lambda_at_arrival_tps": "Empirical task count in each one-second bin; not a measured instantaneous Poisson intensity",
+    "burst_flag": "Constant zero placeholder; actual timestamp ties and gaps are retained independently",
+    "missing_resource_priority_or_class_values": "Non-numeric/nonfinite values imputed as zero; negative CPU/memory rows excluded",
+    "disk_request": "Negative values clipped to zero by the mapping",
+    "capacity_network_energy_cost": "Chosen simulation assumptions; not inferred from the Google trace"
+  },
+  "sampling_limitations": [
+    "One selected prefix is not a representative sample of all deployment conditions",
+    "Repeated evaluation of this same input does not create independent trace samples",
+    "Last timestamp group may be partially retained at the requested record count"
+  ],
+  "mapping_note": "Only submission timing and source resource requests/identifiers are observed. Task computation, transfers, deadlines, placement, edge/cloud capacities, cost and energy are modeled assumptions. This is not validation on a contemporary edge deployment.",
+  "source_selection": {
+    "rows_selected": 20000,
+    "rows_after_mapping": 20000,
+    "rows_removed_by_mapping": 0,
+    "first_timestamp_us": 600047726,
+    "last_timestamp_us": 2135465939
+  },
+  "imputed_field_counts": {
+    "priority": 0,
+    "scheduling_class": 0,
+    "resource_request_cpu": 0,
+    "resource_request_memory": 0,
+    "resource_request_disk": 0
+  },
+  "selected_raw_events_sha256": "3c993bf0cb280640386985504850ab1a1a7d8cf1efe82487113c7bb2f98489c3",
+  "raw_mapped_trace_sha256": "d34d9cb4eeb8d81c0cb05b84b4ff6be33e65444a0251a5bbee8a0392602f9809"
+}

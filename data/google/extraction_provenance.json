@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "source": "https://commondatastorage.googleapis.com/clusterdata-2011-2/task_events/part-00000-of-00500.csv.gz",
+      "selected_records": 20000,
+      "scanned_rows": 332311,
+      "excluded_before_observation_window": 277321,
+      "excluded_non_submit": 34990,
+      "excluded_malformed": 0,
+      "complete_source_read": false,
+      "source_bytes_read": 2818058,
+      "source_prefix_sha256": "ad517741a98393858c3d71328e0ef744645d3a3859140107d197ac0132cd08b3",
+      "checksum_scope": "Bytes consumed from source; partial when complete_source_read is false"
+    }
+  ],
+  "requested_records": 20000,
+  "start_us": 600000000,
+  "source_bytes_read": 2818058,
+  "uncompressed_bytes_processed": 34997920,
+  "scanned_rows": 332311,
+  "elapsed_s": 7.741,
+  "limits": {
+    "max_source_bytes": 67108864,
+    "max_uncompressed_bytes": 536870912,
+    "max_rows": 3000000,
+    "max_seconds": 120.0
+  }
+}
