@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite our accompanying manuscript and identify the repository commit used."
+type: software
+title: "Cloud–Edge Workload Stability"
+authors:
+  - family-names: Paode
+    given-names: Aryan
+  - family-names: S.
+    given-names: Minirani
+repository-code: "https://github.com/gratedcarrot/cloud_edge_workload_stability_codes"
+license: MIT
+abstract: "Finite-capacity cloud–edge workload simulation, matched policy comparisons, analytical verification, and trace and locality sensitivity experiments."
+keywords:
+  - cloud-edge computing
+  - queueing theory
+  - task offloading
+  - discrete-event simulation
