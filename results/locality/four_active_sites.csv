@@ -1,0 +1,5 @@
+source_row_1based,candidate_site_id,latitude_deg,longitude_deg,source_coordinate_precision_note,site_evidence,selection_order,local_index
+38,134857,-37.82091,144.955155,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute,2,0
+81,303712,-37.814257,144.96337,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute,1,1
+85,304365,-37.812934000000006,144.952075,Unknown,ACMA_radio_base_station_candidate_not_verified_compute,4,2
+1,10003026,-37.81517,144.97476,Within 10 meters,ACMA_radio_base_station_candidate_not_verified_compute,3,3

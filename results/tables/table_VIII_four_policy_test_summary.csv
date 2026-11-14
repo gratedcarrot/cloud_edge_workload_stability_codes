@@ -1,0 +1,9 @@
+metric,scenarios,policies,anova_GG_Holm_significant,friedman_Holm_significant
+avg_cost_proxy,5,4,5,5
+avg_energy_proxy,5,4,5,5
+avg_response_time_ms,5,4,5,5
+avg_waiting_time_ms,5,4,5,5
+blocking_probability,5,4,4,4
+cloud_offloading_ratio,5,4,5,5
+sla_violation_rate,5,4,5,5
+throughput_tasks_per_s,5,4,5,5
